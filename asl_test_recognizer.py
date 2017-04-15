@@ -1,4 +1,5 @@
 from unittest import TestCase
+import unittest
 
 from asl_data import AslDb
 from asl_utils import train_all_words
@@ -29,4 +30,7 @@ class TestRecognize(TestCase):
         self.assertEqual(len(guesses), self.test_set.num_items, "Number of test items in guesses list incorrect.")
         self.assertIsInstance(guesses[0], str, "The guesses are not strings")
         self.assertIsInstance(guesses[-1], str, "The guesses are not strings")
+
+if __name__ == '__main__':
+    unittest.main()
 
